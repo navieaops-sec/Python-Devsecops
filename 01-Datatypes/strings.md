@@ -337,3 +337,5 @@ Q6. Give a DevSecOps use case for strings.
 Strings are heavily used when processing logs, security scan results,
 Docker image names, file paths, environment variables, configuration
 values and API responses.
+
+![alt text](image-2.png)
