@@ -1,8 +1,5 @@
 
-# 🎯 What I want you to practice
-
-
-#Do these **5 hands-on exercises**:
+# 🎯  **5 hands-on exercises**:
 
 ### Exercise 1 — IP extraction
 
@@ -18,6 +15,30 @@ ips = re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", log)
 
 
 print(ips)
+
+This is very important.
+
+( \b(?:\d{1,3}\.){3}\d{1,3}\b )
+
+The parentheses create a capturing group.
+
+Because we're using:
+
+re.findall()
+\b - boundaries
+/d - digit
+{1,3} - digits in 1,2,3 range
+{3} - 3sets
+
+Python returns the content of the capturing group.
+
+So instead of returning the entire line:
+
+Failed password for root from 192.168.1.20
+
+it returns only:
+
+192.168.1.20
 
 ### Exercise 2 — CVE Extraction Found CVE-2024-1234 and CVE-2025-5678 during security scan
 #Trivy output
@@ -41,6 +62,7 @@ print(cves)
 │   │    └── \d+
 │   └─────── \d{4}
 └─────────── CVE- 
+
 ### Exercise 3 — Log Filtering
 #Given:
 #INFO Application started
@@ -115,6 +137,7 @@ password=REDACTED
 re.findall() → find
 re.search()  → find
 re.sub()     → replace
+
 🛡️ Real DevSecOps scenario
 
 #Imagine a CI/CD log accidentally contains:
@@ -203,36 +226,7 @@ One or more spaces/whitespace characters.
 Then comes our IP regex:
 \b(?:\d{1,3}\.){3}\d{1,3}\b
 
-You already learned this one! 😎
 
-It finds:
-
-192.168.1.20
-
-or:
-
-172.16.0.10
-⭐ Why are there () around the IP?
-
-This is very important.
-
-( \b(?:\d{1,3}\.){3}\d{1,3}\b )
-
-The parentheses create a capturing group.
-
-Because we're using:
-
-re.findall()
-
-Python returns the content of the capturing group.
-
-So instead of returning the entire line:
-
-Failed password for root from 192.168.1.20
-
-it returns only:
-
-192.168.1.20
 
 🔥 That's a very useful Regex concept for you.
 
